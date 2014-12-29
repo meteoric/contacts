@@ -1,0 +1,5 @@
+<template name="_contactsNew">
+  {{#ionModal title="New Contact"}}
+    {{> quickForm collection="Contacts" id="contacts-new-form" type="insert" omitFields="avatarUrl,details.active" buttonContent="Create Contact"}}
+  {{/ionModal}}
+</template>

@@ -1,0 +1,53 @@
+<template name="contactsShow">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="contacts" text="Contacts"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Details</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_contactsEdit" data-id="{{contact._id}}">Edit</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding contact-detail"}}
+      {{#with contact}}
+        <div class="list card">
+
+          <div class="item item-avatar">
+            <img src="{{avatarUrl}}">
+            <h2>{{name.first}} {{name.last}}</h2>
+            <p>{{location.city}}, {{location.state}}</p>
+          </div>
+
+          <div class="item item-body">
+            {{{activeLabel}}}
+
+            <h4>Notes</h4>
+            <p>
+              {{details.notes}}
+            </p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-email"></i>
+              Send Email
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-iphone"></i>
+              Call
+            </a>
+            <a class="tab-item" href="#" data-action="fake">
+              <i class="icon ion-share"></i>
+              Share
+            </a>
+          </div>
+
+        </div>
+      {{/with}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>

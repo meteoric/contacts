@@ -1,0 +1,5 @@
+<template name="_contactsEdit">
+  {{#ionModal title="Edit Contact"}}
+    {{> quickForm collection="Contacts" doc=contact id="contacts-edit-form" type="update" omitFields="avatarUrl" buttonContent="Save Contact"}}
+  {{/ionModal}}
+</template>

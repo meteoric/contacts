@@ -1,0 +1,23 @@
+<template name="contacts">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Contacts</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" data-ion-modal="_contactsNew">{{> ionIcon icon="ios-plus-empty"}}</button>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="list">
+        {{#each contacts}}
+          <a href="{{pathFor 'contacts.show'}}" class="item item-avatar item-icon-right">
+            <img src="{{avatarUrl}}">
+            {{name.first}} {{name.last}}
+            {{> ionIcon icon="ios-arrow-forward" class="positive"}}
+          </a>
+        {{/each}}
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>
