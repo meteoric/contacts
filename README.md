@@ -8,7 +8,7 @@ This is a demonstration app of the various [Meteoric](https://github.com/meteori
 - [meteoric:ionic-sass](https://github.com/meteoric/ionic-sass)
 - [meteoric:ionicons-sass](https://github.com/meteoric/ionicons-sass)
 - [meteoric:autoform-ionic](https://github.com/meteoric/autoform-ionic)
-- [meteoric:useraccounts-ionic](https://github.com/meteoric/useraccounts-ionic)
+- [useraccounts:ionic](https://github.com/meteoric/useraccounts-ionic)
 
 See it in action here: [meteoric-contacts.meteor.com](http://meteoric-contacts.meteor.com)
 
