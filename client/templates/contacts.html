@@ -9,15 +9,15 @@
 
   {{#ionView}}
     {{#ionContent}}
-      <div class="list">
+      {{#ionList}}
         {{#each contacts}}
-          <a href="{{pathFor 'contacts.show'}}" class="item item-avatar item-icon-right">
+          {{#ionItem path="contacts.show" buttonRight=true avatar=true class="item-icon-right"}}
             <img src="{{avatarUrl}}">
             {{name.first}} {{name.last}}
             {{> ionIcon icon="ios-arrow-forward" class="positive"}}
-          </a>
+          {{/ionItem}}
         {{/each}}
-      </div>
+      {{/ionList}}
     {{/ionContent}}
   {{/ionView}}
 </template>
