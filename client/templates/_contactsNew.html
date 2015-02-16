@@ -1,5 +1,14 @@
 <template name="_contactsNew">
-  {{#ionModal title="New Contact"}}
-    {{> quickForm collection="Contacts" id="contacts-new-form" type="insert" omitFields="avatarUrl,details.active" buttonContent="Create Contact"}}
+  {{#ionModal customTemplate=true}}
+    {{#autoForm collection="Contacts" id="contacts-new-form" type="insert"}}
+      <div class="bar bar-header bar-stable">
+        <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
+        <h2 class="title">Edit Contact</h2>
+        <button type="submit" class="button button-positive button-clear">Add</button>
+      </div>
+      <div class="content has-header overflow-scroll">
+        {{> afQuickFields omitFields="avatarUrl,details.active"}}
+      </div>
+    {{/autoForm}}
   {{/ionModal}}
 </template>
